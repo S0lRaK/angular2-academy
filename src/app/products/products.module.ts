@@ -1,7 +1,8 @@
+import { ProductInsertComponent } from './product-insert.component';
 import { FavouriteService } from './favourite.service';
 import { ProductService } from './product.service';
 import { productsRouting } from './products.routing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrderBy } from './orderBy.pipe';
 import { ProductDetailComponent } from './product-detail.component';
 import { ProductListComponent } from './product-list.component';
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule,
         FormsModule,
-        productsRouting
+        productsRouting,
+        ReactiveFormsModule
         ],
     exports: [
         ProductListComponent
@@ -20,6 +22,7 @@ import { CommonModule } from '@angular/common';
     declarations: [
         ProductListComponent,
         ProductDetailComponent,
+        ProductInsertComponent,
         OrderBy
     ],
     providers: [

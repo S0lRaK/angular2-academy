@@ -8,6 +8,10 @@
 
 <p>{{ favourites }} favourite(s)</p>
 
+<p>
+    <a [routerLink]="['insert']">Add product</a>
+</p>
+
 <div *ngIf="isLoading">
     <h1>Loading products... <span class="loading monkey"></span>
 </h1>
