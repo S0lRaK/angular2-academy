@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ProductService } from './product.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -10,7 +12,11 @@ export class ProductInsertComponent implements OnInit {
     price:FormControl;
     description:FormControl;
 
-    constructor(private _fb:FormBuilder) { }
+    constructor(
+        private _fb:FormBuilder,
+        private _productService:ProductService,
+        private _router:Router
+        ) { }
 
     ngOnInit() {
         this.name = new FormControl('', [Validators.required]);
@@ -31,5 +37,7 @@ export class ProductInsertComponent implements OnInit {
 
      onSubmit() {
          console.log(this.insertForm.value);
+         this._productService.insertProduct(this.insertForm.value);
+         this._router.navigateByUrl("/products");
      }
 }

@@ -13,6 +13,24 @@ export class ProductService {
     private apiEndPoint:string = "http://storerestservice.azurewebsites.net/api/products/";
     private products:IProduct[];
 
+    insertProduct(newProduct:IProduct) : void {
+        newProduct.modifiedDate = new Date();
+
+        let header = new Headers();
+        header.append('Content-Type', 'application/json');
+
+        this._http
+            .post(
+                this.apiEndPoint,
+                JSON.stringify(newProduct),
+                { headers:header })
+            .map(res => res.json())
+            .subscribe(
+                data => this.products.push(data),
+                error => console.log(error)
+            );
+    }
+    
     getProducts() : Observable<IProduct[]> {
         if(this.products)
         {
