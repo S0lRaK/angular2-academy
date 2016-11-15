@@ -8,6 +8,11 @@
 
 <p>{{ favourites }} favourite(s)</p>
 
+<div *ngIf="isLoading">
+    <h1>Loading products... <span class="loading monkey"></span>
+</h1>
+</div>
+
 <ul class="products">
     <li *ngFor="let product of products"
         [class.discontinued]="product.discontinued"

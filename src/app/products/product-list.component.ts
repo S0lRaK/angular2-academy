@@ -1,7 +1,9 @@
 import { ProductService, FavouriteService, IProduct } from './';
 //import { IProduct } from './product.interface';
 
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
+
+import { Subscription } from 'rxjs/Subscription';
 
 
 // Decorator
@@ -15,19 +17,29 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
     }
 )
 
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnDestroy {
     title:string = "Products";
     products:IProduct[];
     selectedProduct:IProduct;
     message:string;
+    isLoading:boolean = false;
+    sub:Subscription;
 
     ngOnInit() {
-        this._productService
+        this.isLoading = true;
+
+        this.sub = this._productService
             .getProducts()
             .subscribe(
                 data => this.products = data,
-                error => console.log(error)
+                error => console.log(error),
+                () => this.isLoading = false
             );
+    }
+
+    ngOnDestroy() {
+        if(this.sub)
+            this.sub.unsubscribe();
     }
 
     onSelect(product:IProduct) : void {
