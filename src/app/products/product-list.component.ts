@@ -30,15 +30,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.isLoading = true;
 
-        this.products$ = this._productService.getProducts();
+        //this.products$ = this._productService.getProducts();
 
-     /*   this.sub = this._productService
+        this.sub = this._productService
             .getProducts()
             .subscribe(
                 data => this.products = data,
                 error => console.log(error),
                 () => this.isLoading = false
-            );*/
+            );
     }
 
     ngOnDestroy() {

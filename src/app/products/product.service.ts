@@ -28,6 +28,13 @@ export class ProductService {
                             return this.products;
                         }
                     )
+                    .catch(this.handleErrors);
         }
+    }
+
+    handleErrors(error:any) {
+        let errorMsg:string = error.json().error || "Server error";
+        console.log(errorMsg);
+        return Observable.throw("Error: " + error);
     }
 }
