@@ -22,7 +22,12 @@ export class ProductListComponent implements OnInit {
     message:string;
 
     ngOnInit() {
-        this.products = this._productService.getProducts();
+        this._productService
+            .getProducts()
+            .subscribe(
+                data => this.products = data,
+                error => console.log(error)
+            );
     }
 
     onSelect(product:IProduct) : void {
