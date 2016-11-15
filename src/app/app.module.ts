@@ -2,7 +2,6 @@ import { routing } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './common/contact.component';
 import { HomeComponent } from './common/home.component';
-import { ProductsModule } from './products/products.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -20,10 +19,10 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ProductsModule,
     routing
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

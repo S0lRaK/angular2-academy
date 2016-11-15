@@ -28,4 +28,4 @@ import { CommonModule } from '@angular/common';
     ]
 })
 
-export class ProductsModule { }
+export default class ProductsModule { } // default => Lazy Load

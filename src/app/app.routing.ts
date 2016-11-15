@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo:'/home', pathMatch:'full' },
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'products', loadChildren:'app/products/products.module' },
   { path: '**', component: HomeComponent } // For any other
   // { path: 'error', component: ErrorComponent }
   // { path: '**', redirectTo:'/error' }

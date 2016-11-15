@@ -3,8 +3,8 @@ import { ProductListComponent } from './product-list.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-    { path: 'products', component:ProductListComponent },
-    { path: 'products/:id', component:ProductDetailComponent } 
+    { path: '', component:ProductListComponent },
+    { path: ':id', component:ProductDetailComponent } 
 ];
 
 export const productsRouting = RouterModule.forChild(routes); 
