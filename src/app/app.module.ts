@@ -1,3 +1,5 @@
+import { ContactComponent } from './common/contact.component';
+import { HomeComponent } from './common/home.component';
 import { ProductsModule } from './products/products.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,7 +9,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ContactComponent
+    ],
   imports: [
     BrowserModule,
     FormsModule,
