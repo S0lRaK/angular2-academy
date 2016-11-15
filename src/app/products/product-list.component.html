@@ -14,7 +14,7 @@
 </div>
 
 <ul class="products">
-    <li *ngFor="let product of products"
+    <li *ngFor="let product of products$ | async"
         [class.discontinued]="product.discontinued"
         [class.selected]="product === selectedProduct"
         (click)="onSelect(product)">

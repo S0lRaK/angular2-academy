@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Observable';
 import { ProductService, FavouriteService, IProduct } from './';
 //import { IProduct } from './product.interface';
 
@@ -20,6 +21,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class ProductListComponent implements OnInit, OnDestroy {
     title:string = "Products";
     products:IProduct[];
+    products$:Observable<IProduct[]>;
     selectedProduct:IProduct;
     message:string;
     isLoading:boolean = false;
@@ -28,13 +30,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.isLoading = true;
 
-        this.sub = this._productService
+        this.products$ = this._productService.getProducts();
+
+     /*   this.sub = this._productService
             .getProducts()
             .subscribe(
                 data => this.products = data,
                 error => console.log(error),
                 () => this.isLoading = false
-            );
+            );*/
     }
 
     ngOnDestroy() {
