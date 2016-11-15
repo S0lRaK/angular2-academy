@@ -1,0 +1,25 @@
+<h2>
+    {{ title}}
+</h2>
+
+<h3>
+    {{ message }}
+</h3>
+
+<p>{{ favourites }} favourite(s)</p>
+
+<ul class="products">
+    <li *ngFor="let product of products"
+        [class.discontinued]="product.discontinued"
+        [class.selected]="product === selectedProduct"
+        (click)="onSelect(product)">
+        <span class="name">{{ product.name | uppercase }}</span>
+        {{ product.description }}
+        <span class="price">{{ product.price | currency:'CAD':true:'.2'}}</span>
+    </li>
+</ul>
+
+<product-detail 
+    (addedToFavourites)="newFavourite($event)"
+    [product]="selectedProduct">
+</product-detail>

@@ -1,0 +1,250 @@
+[
+  {
+    "name": "AppModule",
+    "file": "src/app/app.module.ts",
+    "providers": [],
+    "declarations": [
+      {
+        "name": "AppComponent",
+        "file": "src/app/app.component.ts",
+        "selector": "app-root",
+        "providers": [],
+        "templateUrl": [
+          "app.component.html"
+        ],
+        "styleUrls": [
+          "app.component.css"
+        ],
+        "__raw": [
+          {
+            "kind": 253,
+            "pos": 56,
+            "end": 79,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 56,
+              "end": 67,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 68,
+              "end": 79,
+              "flags": 0,
+              "text": "app-root"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 80,
+            "end": 118,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 80,
+              "end": 94,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 95,
+              "end": 118,
+              "flags": 0,
+              "text": "./app.component.html"
+            }
+          },
+          {
+            "kind": 253,
+            "pos": 119,
+            "end": 156,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 119,
+              "end": 131,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 170,
+              "pos": 132,
+              "end": 156,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 134,
+                  "end": 155,
+                  "flags": 0,
+                  "text": "./app.component.css"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "ProductListComponent"
+      },
+      {
+        "name": "ProductDetailComponent"
+      }
+    ],
+    "imports": [
+      {
+        "name": "BrowserModule"
+      },
+      {
+        "name": "FormsModule"
+      },
+      {
+        "name": "HttpModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "ProductListComponent"
+      }
+    ],
+    "__raw": [
+      {
+        "kind": 253,
+        "pos": 423,
+        "end": 516,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 423,
+          "end": 438,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 439,
+          "end": 516,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 441,
+              "end": 458,
+              "flags": 0,
+              "text": "AppComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 459,
+              "end": 484,
+              "flags": 0,
+              "text": "ProductListComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 485,
+              "end": 512,
+              "flags": 0,
+              "text": "ProductDetailComponent"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 517,
+        "end": 585,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 517,
+          "end": 527,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 528,
+          "end": 585,
+          "flags": 0,
+          "multiLine": true,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 530,
+              "end": 548,
+              "flags": 0,
+              "text": "BrowserModule"
+            },
+            {
+              "kind": 69,
+              "pos": 549,
+              "end": 565,
+              "flags": 0,
+              "text": "FormsModule"
+            },
+            {
+              "kind": 69,
+              "pos": 566,
+              "end": 581,
+              "flags": 0,
+              "text": "HttpModule"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 586,
+        "end": 602,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 586,
+          "end": 598,
+          "flags": 0,
+          "text": "providers"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 599,
+          "end": 602,
+          "flags": 0,
+          "elements": []
+        }
+      },
+      {
+        "kind": 253,
+        "pos": 603,
+        "end": 639,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 603,
+          "end": 615,
+          "flags": 0,
+          "text": "bootstrap"
+        },
+        "initializer": {
+          "kind": 170,
+          "pos": 616,
+          "end": 639,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 618,
+              "end": 638,
+              "flags": 0,
+              "text": "ProductListComponent"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
