@@ -1,3 +1,7 @@
+<div *ngIf="!product">
+    No product to display
+</div>
+
 <div *ngIf="product">
     <h2>{{ product.name | uppercase }}</h2>
     <p>{{ product.description }}</p>

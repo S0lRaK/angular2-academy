@@ -1,6 +1,8 @@
+import { ProductService } from './product.service';
 import { FavouriteService } from './favourite.service';
 import { IProduct } from './product.interface';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     //moduleId: module.id, // Just for system.js
@@ -18,7 +20,14 @@ export class ProductDetailComponent implements OnInit {
         this._favouriteService.addToFavourites(this.product);
     }
     
-    constructor(private _favouriteService:FavouriteService) { }
+    constructor(
+        private _productService:ProductService,
+        private _favouriteService:FavouriteService,
+        private _route:ActivatedRoute) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        let id = + this._route.snapshot.params["id"]; // nothing + any = number
+        if(id)
+            this.product = this._productService.getProductsById(id);
+     }
 }

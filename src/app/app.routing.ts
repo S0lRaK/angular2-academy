@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: HomeComponent } // For any other
+  // { path: 'error', component: ErrorComponent }
+  // { path: '**', redirectTo:'/error' }
 ];
 
 export const routing = RouterModule.forRoot(routes);

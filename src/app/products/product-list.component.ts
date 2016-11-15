@@ -5,6 +5,7 @@ import { ProductService, FavouriteService, IProduct } from './';
 import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs/Subscription';
+import { Router, RouterModule } from '@angular/router';
 
 
 // Decorator
@@ -14,7 +15,7 @@ import { Subscription } from 'rxjs/Subscription';
         templateUrl: 'product-list.component.html',
         styleUrls: ['product-list.component.css'],
         encapsulation: ViewEncapsulation.Emulated,
-        providers: [ProductService, FavouriteService]
+        providers: []
     }
 )
 
@@ -59,6 +60,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
     onSelect(product:IProduct) : void {
         this.selectedProduct = product;
+        this._router.navigateByUrl("/products/" + product.id);
     }
 
     newFavourite(product:IProduct) : void {
@@ -74,7 +76,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
     constructor(
         private _productService:ProductService,
-        private _favouriteService:FavouriteService) {
+        private _favouriteService:FavouriteService,
+        private _router:Router) {
             
     }
 }

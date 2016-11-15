@@ -32,6 +32,11 @@ export class ProductService {
         }
     }
 
+    getProductsById(id:number) : IProduct {
+        return this.products.find(p => p.id == id);
+        // return getProducts().filter()
+    } 
+
     handleErrors(error:any) {
         let errorMsg:string = error.json().error || "Server error";
         console.log(errorMsg);
