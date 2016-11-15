@@ -27,6 +27,16 @@ export class ProductListComponent implements OnInit, OnDestroy {
     isLoading:boolean = false;
     sub:Subscription;
     sorter:string = "name";
+    asc:boolean = false;
+
+    sortList(propertyName:string) : void {
+        if(this.asc)
+        {
+            propertyName = "-" + propertyName;
+        }
+        this.sorter = propertyName;
+        this.asc = !this.asc;
+    }
 
     ngOnInit() {
         this.isLoading = true;

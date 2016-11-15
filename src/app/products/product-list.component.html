@@ -13,6 +13,9 @@
 </h1>
 </div>
 
+<button (click)="sortList('price')">Sort by price</button>
+<button (click)="sortList('name')">Sort by name</button>
+
 <ul class="products">
     <li *ngFor="let product of products | orderBy:[sorter]"
         [class.discontinued]="product.discontinued"
