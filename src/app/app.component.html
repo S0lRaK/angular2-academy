@@ -2,4 +2,12 @@
   {{ title }}
 </h1>
 
-<product-list></product-list>
+<nav>
+  <a [routerLink]="['/home']" >Home</a>
+  <a [routerLink]="['/contact']" >Contact</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<hr />
+Copyright Carlos J. García Carmona
