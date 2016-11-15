@@ -26,6 +26,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     message:string;
     isLoading:boolean = false;
     sub:Subscription;
+    sorter:string = "name";
 
     ngOnInit() {
         this.isLoading = true;

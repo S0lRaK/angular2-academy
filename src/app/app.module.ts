@@ -1,3 +1,4 @@
+import { OrderBy } from './products/orderBy.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    OrderBy
   ],
   imports: [
     BrowserModule,
